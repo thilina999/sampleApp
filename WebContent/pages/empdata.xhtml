@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:h="http://java.sun.com/jsf/html"
+
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Employee Details</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1><h:outputText styleClass="title" value="Employee Details"/></h1>
+            <h:dataTable value="#{empBean.empData}" var="emp"
+
+                         styleClass="table" headerClass="header"
+
+                         rowClasses="oddrow,evenrow">
+                <h:column>
+                    <f:facet name="header">Empno</f:facet>
+                    #{emp.empno}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Name</f:facet>
+                    #{emp.ename}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Salary</f:facet>
+                    #{emp.sal}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Deptno</f:facet>
+                    #{emp.deptno}
+                </h:column>
+            </h:dataTable><br/>
+            <h:commandLink action="gotoLoginPage">Go Back</h:commandLink>
+        </h:form>
+    </h:body>
+</html>

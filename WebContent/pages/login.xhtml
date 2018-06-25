@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+<h:head>
+	<title>Sample App</title>
+	<!--
+	<style>
+	#formOne{
+		color:grey;
+	}
+	</style> -->
+	<script>
+		function checkPass(){
+			if(password == confirmpassword){
+				
+			}else{
+				
+			}
+		}
+	</script>
+</h:head>
+
+<h:body>
+	
+	<h:outputStylesheet name="css/mystyle.css" />
+	
+	<h1>Application Form</h1>
+	<div class="blue">
+		<h:form>
+		    <h:panelGrid columns="2" cellpadding="5">
+		    	
+		        <h:outputLabel for="username" value="Username" style="font-weight:bold" />
+		        <p:inputText id="username" value="#{loginBean.username}" />
+		        
+		        <h:outputLabel for="password" value="Password: " style="font-weight:bold" />
+		        <p:inputText id="password" type="password" value="#{loginBean.password}" />
+		        
+		        <h:outputLabel for="confirmpassword" value=" Repeat Password: " style="font-weight:bold" />
+		        <p:inputText id="confirmpassword" type="password"  />
+		        
+		        <h:commandButton value="Login" action="#{loginBean.checkLogin}"/>
+		    </h:panelGrid>
+		</h:form>
+	</div>   
+</h:body>
+</html>
